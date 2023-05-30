@@ -1,0 +1,47 @@
+@import '../../scss/variables';
+
+.footer {
+  width: 100%;
+  background: #0a0d2f;
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+
+  .inner {
+    padding: 40px 0;
+    width: $width-content;
+    margin: 0 auto;
+
+    .phone {
+      display: flex;
+      justify-content: end;
+      color: $white-color;
+      border-bottom: 1px solid #515991;
+      padding-bottom: 10px;
+    }
+
+    .info {
+      color: #515991;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 10px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .footer {
+    justify-content: center;
+
+    .inner {
+      .phone {
+        justify-content: center;
+      }
+
+      .info {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+@import "../../scss/variables";
+
+.cart {
+  width: 650px;
+  margin: 90px auto;
+
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 40px;
+    margin: 0 0 5px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid $grey-color;
+  }
+
+  .icon {
+    cursor: pointer;
+  }
+
+  .section {
+    margin-top: 60px;
+
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      column-gap: 60px;
+
+      .total {
+        min-width: 120px;
+        font-weight: 700;
+        font-size: 25px;
+        text-align: center;
+      }
+    }
+
+    .buttons {
+      margin-top: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .back {
+        transform: rotate(90deg);
+        margin-right: 15px;
+      }
+
+      .forward {
+        transform: rotate(270deg);
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
+.empty {
+  width: 85%;
+  margin: 90px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+@media (max-width: 740px) {
+  .cart {
+    width: 100%;
+  }
+}
+
+@media (max-width: 595px) {
+  .cart {
+
+    .section {
+      .content {
+        justify-content: space-around;
+      }
+    }
+
+    .buttons {
+      flex-direction: column;
+      row-gap: 10px;
+    }
+  }
+}

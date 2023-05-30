@@ -1,0 +1,24 @@
+@import '../../scss/variables';
+
+.header {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  padding-top: 20px;
+
+  .title {
+    cursor: default;
+    transition: $transition;
+
+    &:hover {
+      color: $red-color;
+    }
+  }
+}
+
+@media (max-width: 595px) {
+  .header {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}

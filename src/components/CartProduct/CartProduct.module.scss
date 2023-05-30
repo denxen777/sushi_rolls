@@ -1,0 +1,33 @@
+@import '../../scss/variables';
+
+.cartProduct {
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $grey-color;
+
+  .product, .data {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+
+    .icon {
+      cursor: pointer;
+    }
+  }
+
+  .price {
+    width: 100px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 595px) {
+  .cartProduct {
+    flex-direction: column;
+  }
+}
+
+

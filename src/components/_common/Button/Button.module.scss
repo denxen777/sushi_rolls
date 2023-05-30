@@ -1,0 +1,43 @@
+@import '../../../scss/variables';
+
+.btn {
+  width: 152px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid $red-color;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 0 15px;
+  transition: 0.45s;
+  outline: none;
+  min-width: 140px;
+
+  &.primary, &.modal {
+    background-color: $red-color;
+    color: $white-color;
+
+    &:hover {
+      background-color: $white-color;
+      color: $red-color;
+    }
+  }
+
+  &.secondary {
+    background-color: $white-color;
+    color: $red-color;
+
+    &:hover {
+      background-color: $red-color;
+      color: $white-color;
+    }
+  }
+
+  &.modal {
+    width: 207px;
+  }
+}

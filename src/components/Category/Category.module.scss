@@ -1,0 +1,38 @@
+@import '../../scss/variables';
+
+.category {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+  position: sticky;
+  top: 0;
+  background: $white-color;
+  box-shadow: 0 4px 5px -6px;
+  z-index: 1;
+  margin-bottom: 20px;
+  column-gap: 50px;
+
+  .list {
+    display: flex;
+    gap: 15px;
+    font-size: 15px;
+    font-weight: 700;
+    white-space: nowrap;
+
+    .item {
+      cursor: pointer;
+      transition: 0.4s;
+      padding: 8px 0;
+
+      &:hover, &.active {
+        color: $red-color;
+      }
+    }
+  }
+}
+
+
+
+
+

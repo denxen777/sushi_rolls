@@ -1,0 +1,27 @@
+@import './scss/variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body.noScroll {
+  overflow-y: hidden;
+  padding-right: 17px;
+}
+
+.wrap {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .inner {
+    width: $width-content;
+    margin: 0 auto;
+  }
+}

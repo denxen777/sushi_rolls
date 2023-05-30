@@ -1,0 +1,58 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+
+  .header {
+    margin-bottom: 15px;
+
+    .inner {
+      text-align: center;
+
+      .img {
+        transition: 0.25s;
+
+        &:hover {
+          transform: scale(0.99);
+        }
+      }
+    }
+
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+
+      .weight {
+        width: 60px;
+        text-align: center;
+      }
+    }
+
+    .desc {
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .price {
+      font-size: 23px;
+      font-weight: 700;
+    }
+  }
+}
+
+
+
+
+

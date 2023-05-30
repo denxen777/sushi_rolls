@@ -1,0 +1,43 @@
+@import "../../../scss/variables";
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  width: 150px;
+  height: 40px;
+  overflow: hidden;
+
+
+  .btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 0 11px;
+    height: 100%;
+    transition: $transition;
+  }
+
+  .text {
+    color: $text-color;
+    min-width: 32px;
+    text-align: center;
+  }
+
+  &.secondary {
+    width: 100px;
+
+    .btn {
+      &:disabled {
+        cursor: default;
+        opacity: 0.1;
+      }
+    }
+  }
+}
+
+

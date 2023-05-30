@@ -1,0 +1,23 @@
+@import '../../../scss/variables';
+
+.btn {
+  width: 250px;
+  height: 50px;
+  padding: 4px;
+  border-radius: 25px;
+  border: none;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  outline: none;
+
+  &.primary {
+    background: $grey-color;
+    color: $text-color;
+  }
+
+  &.secondary {
+    background: $red-color;
+    color: $white-color;
+  }
+}
