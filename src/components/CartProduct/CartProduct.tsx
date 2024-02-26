@@ -5,6 +5,7 @@ import { TItemCart } from '../../redux/cart/types';
 import { ButtonCounter } from '../_common/ButtonCounter/ButtonCounter';
 import { useAppDispatch } from '../../redux/store';
 import { decrement, increment, removeItem } from '../../redux/cart/slice';
+import { Image } from '../_common/Image/Image';
 
 export const CartProduct: React.FC<TItemCart> = ({
   id,
@@ -28,7 +29,7 @@ export const CartProduct: React.FC<TItemCart> = ({
     <div className={styles.cartProduct}>
       <div className={styles.product}>
         <div>
-          <img src={imgURL} alt='Картинка' width={120} height={100} />
+          <Image src={imgURL} alt={'Картинка'} width={120} height={100} />
         </div>
         <div>
           <h4>{name}</h4>

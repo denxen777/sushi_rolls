@@ -14,6 +14,7 @@ import {
 import { ButtonCounter } from '../_common/ButtonCounter/ButtonCounter';
 import { cartSelector } from '../../redux/cart/selectors';
 import { addItemToModal, setActiveModal } from '../../redux/modal/slice';
+import { Image } from '../_common/Image/Image';
 
 export const Product: React.FC<TItemProduct> = ({
   id,
@@ -75,7 +76,7 @@ export const Product: React.FC<TItemProduct> = ({
     <div className={styles.product} onClick={openModalOnClick}>
       <div className={styles.header}>
         <div className={styles.inner}>
-          <img className={styles.img} src={imgURL} alt='' height={230} />
+          <Image src={imgURL} alt={'Картинка'} height={230} />
         </div>
         <div className={styles.info}>
           <h3>{name}</h3>

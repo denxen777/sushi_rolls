@@ -13,6 +13,7 @@ import {
   increment,
   setActiveModal,
 } from '../../redux/modal/slice';
+import { Image } from '../_common/Image/Image';
 
 export const Modal: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -58,7 +59,7 @@ export const Modal: React.FC = () => {
       <div className={styles.wrap}>
         <div className={styles.content} onClick={(e) => e.stopPropagation()}>
           <div className={styles.img}>
-            <img src={imgURL} alt='' width={300} />
+            <Image src={imgURL} alt={'Картинка'} width={300} />
           </div>
           <div className={styles.info}>
             <div className={styles.desc}>
