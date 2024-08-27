@@ -1,7 +1,7 @@
 import React from 'react';
 
 import styles from './Section.module.scss';
-import { Product } from '../Product/Product';
+import Product from '../Product/Product';
 import { Skeleton } from '../Skeleton';
 import { TItemProduct } from '../../redux/product/types';
 

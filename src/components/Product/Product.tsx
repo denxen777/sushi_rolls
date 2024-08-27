@@ -15,8 +15,10 @@ import { ButtonCounter } from '../_common/ButtonCounter/ButtonCounter';
 import { cartSelector } from '../../redux/cart/selectors';
 import { addItemToModal, setActiveModal } from '../../redux/modal/slice';
 import { Image } from '../_common/Image/Image';
+import defaultImage from '../../assets/img/noimage.png';
+import { IWithCheckImages, withCheckImages } from '../../hoc/withCheckImages';
 
-export const Product: React.FC<TItemProduct> = ({
+const Product: React.FC<TItemProduct & IWithCheckImages> = ({
   id,
   imgURL,
   name,
@@ -24,6 +26,7 @@ export const Product: React.FC<TItemProduct> = ({
   price,
   amount,
   description,
+  isErrorImg
 }) => {
   const dispatch = useAppDispatch();
   const { items } = useSelector(cartSelector);
@@ -61,7 +64,7 @@ export const Product: React.FC<TItemProduct> = ({
     dispatch(
       addItemToModal({
         id,
-        imgURL,
+        imgURL: isErrorImg ? defaultImage : imgURL,
         name,
         weight,
         price,
@@ -76,7 +79,11 @@ export const Product: React.FC<TItemProduct> = ({
     <div className={styles.product} onClick={openModalOnClick}>
       <div className={styles.header}>
         <div className={styles.inner}>
-          <Image src={imgURL} alt={'Картинка'} height={230} />
+          <Image
+            src={isErrorImg ? defaultImage : imgURL}
+            alt={'Картинка'}
+            height={230}
+          />
         </div>
         <div className={styles.info}>
           <h3>{name}</h3>
@@ -101,3 +108,7 @@ export const Product: React.FC<TItemProduct> = ({
     </div>
   );
 };
+
+const WithCheckImages = withCheckImages(Product);
+
+export default WithCheckImages;

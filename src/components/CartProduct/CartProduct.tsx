@@ -6,14 +6,17 @@ import { ButtonCounter } from '../_common/ButtonCounter/ButtonCounter';
 import { useAppDispatch } from '../../redux/store';
 import { decrement, increment, removeItem } from '../../redux/cart/slice';
 import { Image } from '../_common/Image/Image';
+import defaultImage from '../../assets/img/noimage.png';
+import { IWithCheckImages, withCheckImages } from '../../hoc/withCheckImages';
 
-export const CartProduct: React.FC<TItemCart> = ({
+const CartProduct: React.FC<TItemCart & IWithCheckImages> = ({
   id,
   imgURL,
   name,
   weight,
   amount,
   price,
+  isErrorImg
 }) => {
   const dispatch = useAppDispatch();
 
@@ -29,7 +32,12 @@ export const CartProduct: React.FC<TItemCart> = ({
     <div className={styles.cartProduct}>
       <div className={styles.product}>
         <div>
-          <Image src={imgURL} alt={'Картинка'} width={120} height={100} />
+          <Image
+            src={isErrorImg ? defaultImage : imgURL}
+            alt={'Картинка'}
+            width={120}
+            height={100}
+          />
         </div>
         <div>
           <h4>{name}</h4>
@@ -65,3 +73,7 @@ export const CartProduct: React.FC<TItemCart> = ({
     </div>
   );
 };
+
+const WithCheckImages = withCheckImages(CartProduct);
+
+export default WithCheckImages;

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import styles from './Cart.module.scss';
 import emptyImg from '../../assets/img/empty.svg';
 import { cartSelector } from '../../redux/cart/selectors';
-import { CartProduct } from '../../components/CartProduct/CartProduct';
+import CartProduct from '../../components/CartProduct/CartProduct';
 import { ButtonNavigation } from '../../components/_common/ButtonNavigation/ButtonNavigation';
 import { useAppDispatch } from '../../redux/store';
 import { clearItems } from '../../redux/cart/slice';
